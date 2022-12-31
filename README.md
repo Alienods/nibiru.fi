@@ -1,6 +1,13 @@
 ### Nibiru — это независимый PoS блокчейн, который объединяет торговлю деривативами с кредитным плечом, спотовую торговлю, стейкинг и предоставление облигационной ликвидности в единый пользовательский интерфейс, позволяющий пользователям более 40 блокчейнов торговать с кредитным плечом, используя набор компонуемых децентрализованных приложений.
 
+
+
+### Эксплоер
+
 Тестнет эксплорер - http://explorer.nodera.org/nibiru/staking
+
+### Discord
+
 Дискорд проект - https://discord.com/invite/nibiru
 
 - **Minimum hardware requirements**:
@@ -12,15 +19,15 @@
 Аренда сервера под ноду  https://pq.hosting/?from=533917
 
 # Обновляем пакеты
-```
+```python
 sudo apt update && sudo apt upgrade -y
 ```
 #### Устанавливаем инструменты разработчика и необходимые пакеты
-```
+```python
 sudo apt install curl build-essential pkg-config libssl-dev git wget jq make gcc tmux chrony -y
 ```
 #### Устанавливаем GO
-```
+```python
 wget https://go.dev/dl/go1.18.4.linux-amd64.tar.gz; \
 rm -rv /usr/local/go; \
 tar -C /usr/local -xzf go1.18.4.linux-amd64.tar.gz && \
@@ -30,13 +37,13 @@ source ~/.bash_profile && \
 go version
 ```
 #### установим Rust (выберем 1 и y )
-```
+```python
 curl https://sh.rustup.rs -sSf | sh
 ```
 # Установка ноды
 
 #### Клонируем репозиторий проекта с нодой, переходим в папку с проектом и собираем бинарные файлы
-```
+```python
 cd $HOME 
 git clone https://github.com/NibiruChain/nibiru.git
 cd nibiru
