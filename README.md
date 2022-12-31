@@ -219,5 +219,30 @@ sudo rm -rf /etc/systemd/system/nibid.service
 sudo rm -rf /usr/local/bin/nibid
 sudo systemctl daemon-reload
 ```
+##### Полезные команды
+
+
+Рестарт ноды
+```
+sudo systemctl restart nibid
+```
+Проверка логов
+```
+sudo journalctl -u nibid -f -o cat
+```
+Узнать адрес валидатора
+```
+nibid keys show $MONIKER_NIBIRU --bech val -a
+`````
+Внести изменения в валидатора
+````
+nibid tx staking edit-validator --identity="" --details="" --website="" \
+--from $WALLET_NIBIRU --chain-id $CHAIN_ID_NIBIRU -y
+
+
+#identity - PGP ключ c keybase.io (устанавливает аватар валидатора)
+#details - текстовое описание валидатора
+
+
 
 
